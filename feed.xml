@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Storybooks Minnesota</title>
+    <description>Storybooks Minnesota is designed specifically for teachers, parents, and community members. It makes 40 stories from the African Storybook available in English as well as the major heritage, immigrant and refugee languages of Minnesota, with stories and audio in English, Amharic, Arabic, French, German, Mandarin, Norwegian, Oromo, Russian, Somali, Spanish, Swedish, and Vietnamese, among others.
+</description>
+    <link>https://global-asp.github.io/storybooks-minnesota//</link>
+    <atom:link href="https://global-asp.github.io/storybooks-minnesota//feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 15 Feb 2018 14:05:22 -0800</pubDate>
+    <lastBuildDate>Thu, 15 Feb 2018 14:05:22 -0800</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+  </channel>
+</rss>
