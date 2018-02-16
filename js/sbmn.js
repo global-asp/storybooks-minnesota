@@ -29,7 +29,7 @@ function switchlang(d,l) {
       btn_en[i].setAttribute("onclick", "switchlang('" + d + "','" + d + "')");
     }
   } else if (l == d) {
-    for (var i = 0; i < btn_sw.length + 1; i++) {
+    for (var i = 0; i < btn_en.length + 1; i++) {
       en[i].style.display = "none";
       def[i].style.display = "block";
       btn_en[i].innerHTML = "en";
