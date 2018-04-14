@@ -35,9 +35,15 @@
 		</a>
 		<div class="btn-group btn-group-block">
 			<a href="/storybooks-minnesota/" class="btn btn-primary">Home</a>
-			<a href="/storybooks-minnesota/about.html" class="btn btn-primary">About us</a>
-			<a href="/storybooks-minnesota/how-to.html" class="btn btn-primary">How to use this website</a>
-			<a href="/storybooks-minnesota/contact.html" class="btn btn-primary">Contact us</a>
+			<div class="dropdown">
+				<a href="#" class="btn btn-primary dropdown-toggle" tabindex="0">About</a>
+				<ul class="menu">
+					<li class="menu-item"><a href="/storybooks-minnesota/about">About us</a></li>
+					<li class="menu-item"><a href="/storybooks-minnesota/about/languages">Languages</a></li>
+				</ul>
+			</div>
+			<a href="/storybooks-minnesota/how-to" class="btn btn-primary">How to use this website</a>
+			<a href="/storybooks-minnesota/contact" class="btn btn-primary">Contact us</a>
 		</div>
 	</section>
 </header>
@@ -53,7 +59,7 @@
 		<option value="/storybooks-minnesota/stories/fr/0112">French</option>
 		<option value="/storybooks-minnesota/stories/de/0112">German</option>
 		<option value="/storybooks-minnesota/stories/zh/0112">Mandarin</option>
-		<option value="/storybooks-minnesota/stories/no/0112">Norwegian</option>
+		<option value="/storybooks-minnesota/stories/nb/0112">Norwegian</option>
 		<option value="/storybooks-minnesota/stories/om/0112">Oromo</option>
 		<option value="/storybooks-minnesota/stories/so/0112">Somali</option>
 		<option value="/storybooks-minnesota/stories/es/0112">Spanish</option>
@@ -73,7 +79,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/am/0112/mp3/01.mp3"></audio>
 				<button onclick="switchlang('am,en','en,fr,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
-				<button onclick="switchlang('am,fr','en,fr,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and French">fr</button>
+				<button style="display:none" onclick="switchlang('am,fr','en,fr,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and French">fr</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-minnesota/css/pencil.svg" alt="Written by" width="38px"></span> Clare Verbeek, Thembani Dladla, Zanele Buthelezi</h3>

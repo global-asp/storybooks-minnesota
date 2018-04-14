@@ -35,9 +35,15 @@
 		</a>
 		<div class="btn-group btn-group-block">
 			<a href="/storybooks-minnesota/" class="btn btn-primary">Home</a>
-			<a href="/storybooks-minnesota/about.html" class="btn btn-primary">About us</a>
-			<a href="/storybooks-minnesota/how-to.html" class="btn btn-primary">How to use this website</a>
-			<a href="/storybooks-minnesota/contact.html" class="btn btn-primary">Contact us</a>
+			<div class="dropdown">
+				<a href="#" class="btn btn-primary dropdown-toggle" tabindex="0">About</a>
+				<ul class="menu">
+					<li class="menu-item"><a href="/storybooks-minnesota/about">About us</a></li>
+					<li class="menu-item"><a href="/storybooks-minnesota/about/languages">Languages</a></li>
+				</ul>
+			</div>
+			<a href="/storybooks-minnesota/how-to" class="btn btn-primary">How to use this website</a>
+			<a href="/storybooks-minnesota/contact" class="btn btn-primary">Contact us</a>
 		</div>
 	</section>
 </header>
@@ -53,7 +59,7 @@
 		<option value="/storybooks-minnesota/stories/fr/0156">French</option>
 		<option value="/storybooks-minnesota/stories/de/0156">German</option>
 		<option value="/storybooks-minnesota/stories/zh/0156">Mandarin</option>
-		<option value="/storybooks-minnesota/stories/no/0156">Norwegian</option>
+		<option value="/storybooks-minnesota/stories/nb/0156">Norwegian</option>
 		<option value="/storybooks-minnesota/stories/om/0156">Oromo</option>
 		<option value="/storybooks-minnesota/stories/so/0156">Somali</option>
 		<option value="/storybooks-minnesota/stories/es/0156">Spanish</option>
@@ -73,7 +79,7 @@
 				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/fr/0156/mp3/01.mp3"></audio>
 				<button onclick="switchlang('fr,en','en,fr,fr')" class="btn btn-lg lang-primary" title="Switch between French and English">en</button>
-				<button onclick="switchlang('fr,fr','en,fr,fr')" class="btn btn-lg lang-secondary" title="Switch between French and French">fr</button>
+				<button style="display:none" onclick="switchlang('fr,fr','en,fr,fr')" class="btn btn-lg lang-secondary" title="Switch between French and French">fr</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-minnesota/css/pencil.svg" alt="Written by" width="38px"></span> Christian G.</h3>
@@ -278,9 +284,9 @@ de nouveau.
 		<h5>Read more <a href="/storybooks-minnesota/stories/fr/level1">level 1</a> stories:</h5>
 			<label class="chip"><a href="/storybooks-minnesota/stories/fr/0112/">Mon corps</a></label>
 			<label class="chip"><a href="/storybooks-minnesota/stories/fr/0009/">Où est mon chat&nbsp;?</a></label>
+			<label class="chip"><a href="/storybooks-minnesota/stories/fr/0327/">Compter les animaux</a></label>
 			<label class="chip"><a href="/storybooks-minnesota/stories/fr/0067/">Cuisiner</a></label>
 			<label class="chip"><a href="/storybooks-minnesota/stories/fr/0129/">Petit frère paresseux</a></label>
-			<label class="chip"><a href="/storybooks-minnesota/stories/fr/0327/">Compter les animaux</a></label>
 			<label class="chip"><a href="/storybooks-minnesota/stories/fr/0030/">Les sentiments</a></label>
 			<label class="chip"><a href="/storybooks-minnesota/stories/fr/0002/">Regardez les animaux</a></label>
 			<label class="chip"><a href="/storybooks-minnesota/stories/fr/0003/">Les vêtements d'école</a></label>
