@@ -66,12 +66,14 @@
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0296/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h1 dir="rtl"><span class="def">تُومْ، بَائِعُ المَوْزِ</span>
-<span dir="ltr" class="en">Tom the banana seller</span>
-<span class="fr">Tom le vendeur de bananes</span>
+			<span class="l1">Tom the banana seller</span>
+			<span class="l2">Tom le vendeur de bananes</span>
 			<div class="btn-group">
 				<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-				<button class="btn btn-lg" id="playbutton" onclick="playpause('')" title="Play/pause"><i class="icon-volume-up"></i></button>
+				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/ar/0296/mp3/01.mp3"></audio>
+				<button onclick="switchlang('ar,en','en,fr,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+				<button onclick="switchlang('ar,fr','en,fr,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and French">fr</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-minnesota/css/pencil.svg" alt="Written by" width="38px"></span> Humphreys Odunga</h3>
@@ -80,21 +82,23 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Read by"><img class="cover-icon" src="/storybooks-minnesota/css/megaphone.svg" alt="Read by" width="38px"></span> Mashael Muhanna</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-minnesota/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-minnesota/stories/ar">Arabic</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-minnesota/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-minnesota/stories/ar/level2">Level 2</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-minnesota/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/ar/0296/0296.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-minnesota/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/ar/0296/ar-0296_tom.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
 
 <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0296/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
+
 	يَحْمِلُ توم طَبَقَ المَوْزِ النَّاضِجِ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3 dir="rtl">
 	Tom carries a tray of ripe bananas.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3 dir="rtl">
 	Tom transporte un plateau de bananes mures.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -105,7 +109,7 @@
 		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,en','en,fr,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 		<button style="display:none" onclick="switchlang('ar','fr')" class="btn btn-lg lang-fr" title="Switch between Arabic and French">fr</button>
 	</div>
 </div>
@@ -115,14 +119,15 @@
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0296/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
+
 	يَتَّجِهُ تُومْ إِلَى السُّوقِ لِبَيْعِ المَوْزِ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3 dir="rtl">
 	Tom goes to the market to sell bananas.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3 dir="rtl">
 	Tom va au marché pour vendre des bananes.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -133,7 +138,7 @@
 		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,en','en,fr,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 		<button style="display:none" onclick="switchlang('ar','fr')" class="btn btn-lg lang-fr" title="Switch between Arabic and French">fr</button>
 	</div>
 </div>
@@ -143,14 +148,15 @@
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0296/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
+
 	النَّاسُ فِي السُّوقِ يَشْتَرُونَ الفَاكِهَة.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3 dir="rtl">
 	People at the market are buying fruit.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3 dir="rtl">
 	Les gens au marché achètent des fruits.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -161,7 +167,7 @@
 		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,en','en,fr,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 		<button style="display:none" onclick="switchlang('ar','fr')" class="btn btn-lg lang-fr" title="Switch between Arabic and French">fr</button>
 	</div>
 </div>
@@ -171,18 +177,19 @@
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0296/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
+
 	لَكِنْ لاَ أَحَدَ يَشْتَرِي مَوْزَاتِ تُومْ. إِنَّهُمْ يُحَبِّذُونَ شِرَاءَ الفَاكِهَةِ مِنَ النَّسَاءِ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3 dir="rtl">
 	But no one is buying
 
 Tom's bananas.
 
 They prefer to buy fruit from women.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3 dir="rtl">
 	Mais personne n'achète les bananes de Tom. Ils préfèrent acheter leurs fruits des femmes.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -193,7 +200,7 @@ They prefer to buy fruit from women.
 		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,en','en,fr,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 		<button style="display:none" onclick="switchlang('ar','fr')" class="btn btn-lg lang-fr" title="Switch between Arabic and French">fr</button>
 	</div>
 </div>
@@ -203,14 +210,15 @@ They prefer to buy fruit from women.
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0296/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
+
 	يَقُولُ النَّاسُ "فِي مُجْتَمَعِنَا لاَ يَبِيعُ الفَاكِهَةَ إِلاَّ النِّسَاءُ" وَيَتَسَاءَلُونَ "مَا نَوْعُ هَذَا الرَّجُلِ؟"
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3 dir="rtl">
 	"In our community, only women sell fruit," people say. "What kind of a man is this?" people ask.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3 dir="rtl">
 	« Dans notre communauté, seulement les femmes vendent des fruits, » les gens disent. « Quelle sorte d'homme est celui-ci ? » les gens demandent.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -221,7 +229,7 @@ They prefer to buy fruit from women.
 		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,en','en,fr,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 		<button style="display:none" onclick="switchlang('ar','fr')" class="btn btn-lg lang-fr" title="Switch between Arabic and French">fr</button>
 	</div>
 </div>
@@ -231,18 +239,19 @@ They prefer to buy fruit from women.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0296/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
+
 	لَكِنَّ تُومْ لاَ يَسْتَسْلِمُ. هَا هُوَ يُنَادِي "اِشْتَرُوا مَوْزِي … اِشْتَرُوا مَوْزِيَ النَّاضِجَ اللَّذِيذَ."
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3 dir="rtl">
 	But Tom does not give up.
 
 He calls, "Buy my bananas!
 
 Buy my sweet ripe bananas!"
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3 dir="rtl">
 	Mais Tom ne démissionne pas. Il crie, « Achetez mes bananes ! Achetez mes bananes mures et sucrées ! »
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -253,7 +262,7 @@ Buy my sweet ripe bananas!"
 		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,en','en,fr,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 		<button style="display:none" onclick="switchlang('ar','fr')" class="btn btn-lg lang-fr" title="Switch between Arabic and French">fr</button>
 	</div>
 </div>
@@ -263,16 +272,17 @@ Buy my sweet ripe bananas!"
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0296/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
+
 	أَخَذَتْ امْرَأَةٌ حِزْمَةَ المَوْزِ مِنْ عَلَى الطَّبَقِ وَتَفَحَّصَتْهَا بِعِنَايَةٍ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3 dir="rtl">
 	One woman picks up a bunch of bananas from the tray.
 
 She looks at the bananas carefully.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3 dir="rtl">
 	Une femme choisi un régime de bananes du plateau. Elle inspecte les bananes soigneusement.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -283,7 +293,7 @@ She looks at the bananas carefully.
 		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,en','en,fr,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 		<button style="display:none" onclick="switchlang('ar','fr')" class="btn btn-lg lang-fr" title="Switch between Arabic and French">fr</button>
 	</div>
 </div>
@@ -293,14 +303,15 @@ She looks at the bananas carefully.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0296/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
+
 	اشْتَرَتْ المَرْأَةُ المَوْزَ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3 dir="rtl">
 	The woman buys the bananas.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3 dir="rtl">
 	La femme achète les bananes.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -311,7 +322,7 @@ She looks at the bananas carefully.
 		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,en','en,fr,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 		<button style="display:none" onclick="switchlang('ar','fr')" class="btn btn-lg lang-fr" title="Switch between Arabic and French">fr</button>
 	</div>
 </div>
@@ -321,16 +332,17 @@ She looks at the bananas carefully.
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0296/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
+
 	تَوَافَدَ النَّاسُ عَلَى المِنْضَدَةِ. يَشْتَرُونَ مَوْزَاتِ تُومْ وَيَأْكُلُونَهَا.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3 dir="rtl">
 	More people come to the stall.
 
 They buy Tom's bananas and eat them.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3 dir="rtl">
 	D'autres personnes viennent au stand. Ils achètent les bananes de Tom et les mangent.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -341,7 +353,7 @@ They buy Tom's bananas and eat them.
 		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,en','en,fr,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 		<button style="display:none" onclick="switchlang('ar','fr')" class="btn btn-lg lang-fr" title="Switch between Arabic and French">fr</button>
 	</div>
 </div>
@@ -351,16 +363,17 @@ They buy Tom's bananas and eat them.
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0296/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
+
 	أُفْرِغَ الطَّبَقُ بِسُرْعَةٍ. أَخَذَ تُومْ يُحْصِي المَالَ الذِي رَبِحَهُ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3 dir="rtl">
 	Soon, the tray is empty.
 
 Tom counts the money he earned.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3 dir="rtl">
 	Bientôt, le plateau est vide. Tom compte l'argent qu'il a gagné.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -371,7 +384,7 @@ Tom counts the money he earned.
 		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,en','en,fr,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 		<button style="display:none" onclick="switchlang('ar','fr')" class="btn btn-lg lang-fr" title="Switch between Arabic and French">fr</button>
 	</div>
 </div>
@@ -381,16 +394,17 @@ Tom counts the money he earned.
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0296/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
+
 	ثُمَّ اشْتَرَى تُومْ صَابُونًا وَسُكَّرًا وَخُبْزًا وَوَضَعَ المُشْتَرَيَاتِ فِي الطَّبَقِ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3 dir="rtl">
 	Then Tom buys soap, sugar, and bread.
 
 He puts the things in his tray.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3 dir="rtl">
 	Ensuite, Tom achète du savon, du sucre et du pain. Il met les choses sur son plateau.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -401,7 +415,7 @@ He puts the things in his tray.
 		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,en','en,fr,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 		<button style="display:none" onclick="switchlang('ar','fr')" class="btn btn-lg lang-fr" title="Switch between Arabic and French">fr</button>
 	</div>
 </div>
@@ -411,14 +425,15 @@ He puts the things in his tray.
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0296/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3 dir="rtl">
+
 	وَضَعَ تُومْ الطَّبَقَ عَلَى رَأْسِهِ وَرَجَعَ إِلَى مَنْزِلِهِ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3 dir="rtl">
 	Tom balances the tray on his head and goes home.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3 dir="rtl">
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3 dir="rtl">
 	Tom balance le plateau sur sa tête et rentre chez lui.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -429,7 +444,7 @@ He puts the things in his tray.
 		<button class="btn btn-lg" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,en','en,fr,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 		<button style="display:none" onclick="switchlang('ar','fr')" class="btn btn-lg lang-fr" title="Switch between Arabic and French">fr</button>
 	</div>
 </div>

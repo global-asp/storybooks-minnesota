@@ -66,12 +66,14 @@
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0095/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h1><span class="def">Zama er flink!</span>
-<span class="en">Zama is great!</span>
-<span class="fr">Zama est formidable !</span>
+			<span class="l1">Zama is great!</span>
+			<span class="l2">Zama est formidable !</span>
 			<div class="btn-group">
 				<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-				<button class="btn btn-lg" id="playbutton" onclick="playpause('')" title="Play/pause"><i class="icon-volume-up"></i></button>
+				<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/no/0095/mp3/01.mp3"></audio>
+				<button onclick="switchlang('no,en','en,fr,no')" class="btn btn-lg lang-primary" title="Switch between Norwegian and English">en</button>
+				<button onclick="switchlang('no,fr','en,fr,no')" class="btn btn-lg lang-secondary" title="Switch between Norwegian and French">fr</button>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-minnesota/css/pencil.svg" alt="Written by" width="38px"></span> Michael Oguttu</h3>
@@ -79,25 +81,26 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon" src="/storybooks-minnesota/css/global.svg" alt="Translated by" width="38px"></span> Espen Stranger-Johannessen</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-minnesota/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-minnesota/stories/no">Norwegian</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-minnesota/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-minnesota/stories/no/level2">Level 2</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-minnesota/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/no/0095/0095.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-minnesota/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/no/0095/no-0095_zama.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
 
 <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0095/02.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
-	Lillebroren min sover veldig lenge.
-Jeg våkner tidlig, fordi jeg er flink!
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
+
+	Lillebroren min sover veldig lenge. Jeg våkner tidlig fordi jeg er flink!
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	My little brother sleeps
 very late.
 I wake early, because I
 am great!
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
 	Mon petit frère dort très tard. Je me réveille tôt, parce que je suis formidable !
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -108,7 +111,7 @@ am great!
 		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('no','en')" class="btn btn-lg lang-en" title="Switch between Norwegian and English">en</button>
+		<button onclick="switchlang('no,en','en,fr,no')" class="btn btn-lg lang-primary" title="Switch between Norwegian and English">en</button>
 		<button style="display:none" onclick="switchlang('no','fr')" class="btn btn-lg lang-fr" title="Switch between Norwegian and French">fr</button>
 	</div>
 </div>
@@ -118,15 +121,16 @@ am great!
 
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0095/03.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
+
 	Jeg er den som slipper solen inn.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	I am the one who lets in
 the sun.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
 	Je suis celle qui laisse rentrer le soleil.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -137,7 +141,7 @@ the sun.
 		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('no','en')" class="btn btn-lg lang-en" title="Switch between Norwegian and English">en</button>
+		<button onclick="switchlang('no,en','en,fr,no')" class="btn btn-lg lang-primary" title="Switch between Norwegian and English">en</button>
 		<button style="display:none" onclick="switchlang('no','fr')" class="btn btn-lg lang-fr" title="Switch between Norwegian and French">fr</button>
 	</div>
 </div>
@@ -147,15 +151,16 @@ the sun.
 
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0095/04.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
+
 	"Du er min morgenstjerne", sier mamma.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	"You're my morning
 star," says Ma.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
 	« Tu es mon étoile du matin, » me dit maman.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -166,7 +171,7 @@ star," says Ma.
 		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('no','en')" class="btn btn-lg lang-en" title="Switch between Norwegian and English">en</button>
+		<button onclick="switchlang('no,en','en,fr,no')" class="btn btn-lg lang-primary" title="Switch between Norwegian and English">en</button>
 		<button style="display:none" onclick="switchlang('no','fr')" class="btn btn-lg lang-fr" title="Switch between Norwegian and French">fr</button>
 	</div>
 </div>
@@ -176,15 +181,16 @@ star," says Ma.
 
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0095/05.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
+
 	Jeg vasker meg selv, jeg vil ikke ha hjelp.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	I wash myself, I don't
 need any help.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
 	Je me lave, je n'ai pas besoin d'aide.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -195,7 +201,7 @@ need any help.
 		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('no','en')" class="btn btn-lg lang-en" title="Switch between Norwegian and English">en</button>
+		<button onclick="switchlang('no,en','en,fr,no')" class="btn btn-lg lang-primary" title="Switch between Norwegian and English">en</button>
 		<button style="display:none" onclick="switchlang('no','fr')" class="btn btn-lg lang-fr" title="Switch between Norwegian and French">fr</button>
 	</div>
 </div>
@@ -205,16 +211,17 @@ need any help.
 
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0095/06.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
+
 	Jeg tåler kaldt vann og blå stinkende såpe.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	I can cope with cold
 water and blue smelly
 soap.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
 	Je peux m'en sortir avec de l'eau froide et du savon bleu malodorant.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -225,7 +232,7 @@ soap.
 		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('no','en')" class="btn btn-lg lang-en" title="Switch between Norwegian and English">en</button>
+		<button onclick="switchlang('no,en','en,fr,no')" class="btn btn-lg lang-primary" title="Switch between Norwegian and English">en</button>
 		<button style="display:none" onclick="switchlang('no','fr')" class="btn btn-lg lang-fr" title="Switch between Norwegian and French">fr</button>
 	</div>
 </div>
@@ -235,18 +242,18 @@ soap.
 
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0095/07.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
-	Mamma minner meg på tannpussen: "Glem ikke tennene."
-Jeg svarer: "Aldri, ikke jeg!"
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
+
+	Mamma minner meg på tannpussen: "Glem ikke tennene." Jeg svarer: "Aldri, ikke jeg!"
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	Ma reminds, "Don't
 forget teeth."
 I reply, "Never, not
 me!"
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
 	Maman rappelle, « N'oublie pas des dents. » Je réponds, « Jamais, pas moi ! »
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -257,7 +264,7 @@ me!"
 		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('no','en')" class="btn btn-lg lang-en" title="Switch between Norwegian and English">en</button>
+		<button onclick="switchlang('no,en','en,fr,no')" class="btn btn-lg lang-primary" title="Switch between Norwegian and English">en</button>
 		<button style="display:none" onclick="switchlang('no','fr')" class="btn btn-lg lang-fr" title="Switch between Norwegian and French">fr</button>
 	</div>
 </div>
@@ -267,17 +274,18 @@ me!"
 
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0095/08.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
+
 	Etter kroppsvasken hilser jeg på bestefar og tante og ønsker dem en god dag.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	After washing, I greet
 Grandpa and Auntie,
 and wish them a good
 day.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
 	Après avoir lavé, j'accueillis grand-papa et tantine et je leur souhaite une bonne journée.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -288,7 +296,7 @@ day.
 		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('no','en')" class="btn btn-lg lang-en" title="Switch between Norwegian and English">en</button>
+		<button onclick="switchlang('no,en','en,fr,no')" class="btn btn-lg lang-primary" title="Switch between Norwegian and English">en</button>
 		<button style="display:none" onclick="switchlang('no','fr')" class="btn btn-lg lang-fr" title="Switch between Norwegian and French">fr</button>
 	</div>
 </div>
@@ -298,15 +306,16 @@ day.
 
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0095/09.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
+
 	Så kler jeg på meg selv. "Jeg er stor nå, mamma", sier jeg.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	Then I dress myself,
 "I'm big now Ma," I say.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
 	Ensuite, je m'habille, « Je suis grande maintenant 'man, » je dis.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -317,7 +326,7 @@ day.
 		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('no','en')" class="btn btn-lg lang-en" title="Switch between Norwegian and English">en</button>
+		<button onclick="switchlang('no,en','en,fr,no')" class="btn btn-lg lang-primary" title="Switch between Norwegian and English">en</button>
 		<button style="display:none" onclick="switchlang('no','fr')" class="btn btn-lg lang-fr" title="Switch between Norwegian and French">fr</button>
 	</div>
 </div>
@@ -327,15 +336,16 @@ day.
 
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0095/10.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
+
 	Jeg kan kneppe knapper og spenne skoene mine.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	I can close my buttons
 and buckle my shoes.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
 	Je peux fermer mes boutons et boucler mes chaussures.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -346,7 +356,7 @@ and buckle my shoes.
 		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('no','en')" class="btn btn-lg lang-en" title="Switch between Norwegian and English">en</button>
+		<button onclick="switchlang('no,en','en,fr,no')" class="btn btn-lg lang-primary" title="Switch between Norwegian and English">en</button>
 		<button style="display:none" onclick="switchlang('no','fr')" class="btn btn-lg lang-fr" title="Switch between Norwegian and French">fr</button>
 	</div>
 </div>
@@ -356,16 +366,17 @@ and buckle my shoes.
 
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0095/11.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
-	Og jeg sørger for at lillebror kjenner alt nytt fra skolen.
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
+
+	Og jeg sørger for at lillebror får vite alt nytt fra skolen.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	And I make sure little
 brother knows all the
 school news.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
 	Et je m'assure que mon petit frère connaît toutes les nouvelles de l'école.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -376,7 +387,7 @@ school news.
 		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('no','en')" class="btn btn-lg lang-en" title="Switch between Norwegian and English">en</button>
+		<button onclick="switchlang('no,en','en,fr,no')" class="btn btn-lg lang-primary" title="Switch between Norwegian and English">en</button>
 		<button style="display:none" onclick="switchlang('no','fr')" class="btn btn-lg lang-fr" title="Switch between Norwegian and French">fr</button>
 	</div>
 </div>
@@ -386,15 +397,16 @@ school news.
 
 <div id="text12" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0095/12.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
-	I klassen gjør jeg alltid mitt beste.
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
+
+	I timene gjør jeg alltid mitt beste.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	In class I do my best in
 every way.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
 	En classe je fais de mon mieux de toutes les façons.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -405,7 +417,7 @@ every way.
 		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('no','en')" class="btn btn-lg lang-en" title="Switch between Norwegian and English">en</button>
+		<button onclick="switchlang('no,en','en,fr,no')" class="btn btn-lg lang-primary" title="Switch between Norwegian and English">en</button>
 		<button style="display:none" onclick="switchlang('no','fr')" class="btn btn-lg lang-fr" title="Switch between Norwegian and French">fr</button>
 	</div>
 </div>
@@ -415,19 +427,19 @@ every way.
 
 <div id="text13" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0095/13.jpg"></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
-	Jeg gjør alle disse gode tingene hver dag.
-Men det jeg liker mest, er å leke og leke!
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt def"><h3>
+
+	Jeg gjør alle disse gode tingene hver dag. Men det jeg liker mest, er å leke og leke!
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l1"><h3>
 	I do all these good
 things every day.
 But the thing I like
 most, is to play and
 play!
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 fr"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level2-txt l2"><h3>
 	Je fais toutes ces bonnes choses chaque jour. Mais la chose que j'aime le mieux, c'est de jouer et jouer !
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -438,7 +450,7 @@ play!
 		<button class="btn btn-lg" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('no','en')" class="btn btn-lg lang-en" title="Switch between Norwegian and English">en</button>
+		<button onclick="switchlang('no,en','en,fr,no')" class="btn btn-lg lang-primary" title="Switch between Norwegian and English">en</button>
 		<button style="display:none" onclick="switchlang('no','fr')" class="btn btn-lg lang-fr" title="Switch between Norwegian and French">fr</button>
 	</div>
 </div>
