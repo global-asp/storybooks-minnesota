@@ -34,30 +34,14 @@ function switchlang(o,c) {
   btn_lang1 = document.getElementsByClassName("lang-primary");
   btn_lang2 = document.getElementsByClassName("lang-secondary");
 
-  if (to_lang == primary) {
-    for (var i = 0; i < btn_lang1.length; i++) {
-      l1[i].style.display = "block";
-      l2[i].style.display = "none";
-      def[i].style.display = "none";
-      if (page_lang != primary && page_lang != secondary) {
-        btn_lang1[i].innerHTML = page_lang;
-        btn_lang1[i].setAttribute("onclick", "switchlang('" + primary + "," + page_lang + "','" + c + "')");
-        btn_lang2[i].innerHTML = secondary;
-        btn_lang2[i].setAttribute("onclick", "switchlang('" + page_lang + "," + secondary + "','" + c + "')");
-      }
-    }
-  } else {
-    for (var i = 0; i < btn_lang1.length; i++) {
-      l1[i].style.display = "none";
-      l2[i].style.display = "none";
-      def[i].style.display = "block";
-      if (page_lang != primary && page_lang != secondary) {
-        btn_lang1[i].innerHTML = primary;
-        btn_lang1[i].setAttribute("onclick", "switchlang('" + page_lang + "," + primary + "','" + c + "')");
-        btn_lang2[i].innerHTML = secondary;
-        btn_lang2[i].setAttribute("onclick", "switchlang('" + page_lang + "," + secondary + "','" + c + "')");
-      }
-    }
+  for (var i = 0; i < btn_lang1.length; i++) {
+    l1[i].style.display = "none";
+    l2[i].style.display = "none";
+    def[i].style.display = "block";
+    btn_lang1[i].innerHTML = primary;
+    btn_lang1[i].setAttribute("onclick", "switchlang('" + page_lang + "," + primary + "','" + c + "')");
+    btn_lang2[i].innerHTML = secondary;
+    btn_lang2[i].setAttribute("onclick", "switchlang('" + page_lang + "," + secondary + "','" + c + "')");
   }
 }
 
