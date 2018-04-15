@@ -46,18 +46,6 @@ function switchlang(o,c) {
         btn_lang2[i].setAttribute("onclick", "switchlang('" + page_lang + "," + secondary + "','" + c + "')");
       }
     }
-  } else if (to_lang == secondary) {
-    for (var i = 0; i < btn_lang2.length; i++) {
-      l1[i].style.display = "none";
-      l2[i].style.display = "block";
-      def[i].style.display = "none";
-      if (page_lang != primary && page_lang != secondary) {
-        btn_lang1[i].innerHTML = primary;
-        btn_lang1[i].setAttribute("onclick", "switchlang('" + page_lang + "," + primary + "','" + c + "')");
-        btn_lang2[i].innerHTML = page_lang;
-        btn_lang2[i].setAttribute("onclick", "switchlang('" + secondary + "," + page_lang + "','" + c + "')");
-      }
-    }
   } else {
     for (var i = 0; i < btn_lang1.length; i++) {
       l1[i].style.display = "none";
