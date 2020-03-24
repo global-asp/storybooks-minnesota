@@ -10,7 +10,7 @@
 	<link rel="manifest" href="/storybooks-minnesota/site.webmanifest?v=4">
 	<link rel="mask-icon" href="/storybooks-minnesota/safari-pinned-tab.svg?v=4" color="#5bbad5">
 	<link rel="shortcut icon" href="/storybooks-minnesota/favicon.ico?v=4">
-	<meta name="msapplication-TileColor" content="#ffc40d">
+	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="theme-color" content="#ffffff">
 	<title>La Gallina y el Águila - Storybooks Minnesota</title>
 	<meta name="description" content="Storybooks Minnesota is designed specifically for teachers, parents, and community members. It makes 40 stories from the African Storybook available in English as well as the major heritage, immigrant and refugee languages of Minnesota, with stories and audio in English, Amharic, Arabic, French, German, Mandarin, Norwegian, Oromo, Russian, Somali, Spanish, Swedish, and Vietnamese, among others.
@@ -20,12 +20,10 @@
 	<link rel="stylesheet" href="/storybooks-minnesota/css/fontello.min.css">
 	<link rel="canonical" href="https://global-asp.github.io//storybooks-minnesota/stories/es/0158/">
 	<link rel="alternate" type="application/rss+xml" title="Storybooks Minnesota" href="/storybooks-minnesota">
-	<script src="/storybooks-minnesota/js/sbc.js"></script>
+	<script src="/storybooks-minnesota/js/sbc.min.js"></script>
 </head>
 
-
   <body>
-
 
     <div class="container">
 
@@ -49,12 +47,13 @@
 	</section>
 </header>
 
-        <div class="float-right"><a class="btn btn-lg disabled" target="_blank" href="">Download PDF</a></div> 
+        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Change language</option>
 		<option value="/storybooks-minnesota/stories/en/0158">English</option>
+		<option value="/storybooks-minnesota/stories/es/0158">Spanish</option>
 		<option value="/storybooks-minnesota/stories/am/0158">Amharic</option>
 		<option value="/storybooks-minnesota/stories/ar/0158">Arabic</option>
 		<option value="/storybooks-minnesota/stories/fr/0158">French</option>
@@ -63,7 +62,6 @@
 		<option value="/storybooks-minnesota/stories/nb/0158">Norwegian</option>
 		<option value="/storybooks-minnesota/stories/om/0158">Oromo</option>
 		<option value="/storybooks-minnesota/stories/so/0158">Somali</option>
-		<option value="/storybooks-minnesota/stories/es/0158">Spanish</option>
 	</select>
 </div>
 
@@ -80,8 +78,8 @@
 			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
 			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/es/0158/mp3/01.mp3"></audio>
-			<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch between Spanish and English">en</button>
-			<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch between Spanish and Spanish">es</button>
+			<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch to English">en</button>
+			<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch to Spanish">es</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon cover-icon-text" src="/storybooks-minnesota/css/pencil.svg" alt="Written by"></span> Ann Nduku</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon cover-icon-text" src="/storybooks-minnesota/css/art.svg" alt="Illustrated by"></span> Wiehan de Jager</h3>
@@ -90,15 +88,16 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon cover-icon-text" src="/storybooks-minnesota/css/language.svg" alt="Language"></span> <a href="/storybooks-minnesota/stories/es">Spanish</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon cover-icon-text" src="/storybooks-minnesota/css/level.svg" alt="Level"></span> <a href="/storybooks-minnesota/stories/es/level3">Level 3</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-audio" src="/storybooks-minnesota/css/speaker.svg" alt="Narrate full story"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/es/0158/es-0158_hen.mp3" type="audio/mpeg"></audio></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Reading speed"><img class="cover-icon cover-icon-text" src="/storybooks-minnesota/css/speedometer.svg" alt="Reading speed" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="Reading speed: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/storybooks-minnesota/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
+
 <hr>
 
-<div id="text02" class="columns">
+        <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/02.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	Hace mucho tiempo, la Gallina y el Águila eran amigos. Vivían en paz con todas las otras aves. Ninguna de ellas podía volar.
 	</h3></div>
 
@@ -115,12 +114,12 @@ None of them could fly.
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text03" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio02" onended="resetbutton('02')" src="https://globalstorybooks.net/media/audio/es/0158/mp3/02.mp3"></audio>
+		<audio id="audio02" src="https://globalstorybooks.net/media/audio/es/0158/mp3/02.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch between Spanish and English">en</button>
-		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch between Spanish and Spanish">es</button>
+		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch to English">en</button>
+		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch to Spanish">es</button>
 	</div>
 </div>
 
@@ -130,7 +129,6 @@ None of them could fly.
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/03.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	Un día, la hambruna llegó y el Águila tuvo que caminar muy lejos en búsqueda de comida. Regresó muy cansada. “¡Tiene que haber una forma más fácil de viajar!” dijo el Águila.
 	</h3></div>
 
@@ -149,12 +147,12 @@ to travel!” said Eagle.
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text04" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio03" onended="resetbutton('03')" src="https://globalstorybooks.net/media/audio/es/0158/mp3/03.mp3"></audio>
+		<audio id="audio03" src="https://globalstorybooks.net/media/audio/es/0158/mp3/03.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch between Spanish and English">en</button>
-		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch between Spanish and Spanish">es</button>
+		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch to English">en</button>
+		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch to Spanish">es</button>
 	</div>
 </div>
 
@@ -164,7 +162,6 @@ to travel!” said Eagle.
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	Luego de un sueño reparador, la Gallina tuvo una idea brillante. Empezó a recoger las plumas que sus amigas aves soltaban. “Cosamos las plumas por encima de las nuestras”, dijo. “Quizás así sea más fácil viajar.”
 	</h3></div>
 
@@ -185,12 +182,12 @@ to travel.”
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text05" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio04" onended="resetbutton('04')" src="https://globalstorybooks.net/media/audio/es/0158/mp3/04.mp3"></audio>
+		<audio id="audio04" src="https://globalstorybooks.net/media/audio/es/0158/mp3/04.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch between Spanish and English">en</button>
-		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch between Spanish and Spanish">es</button>
+		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch to English">en</button>
+		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch to Spanish">es</button>
 	</div>
 </div>
 
@@ -200,7 +197,6 @@ to travel.”
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/05.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	El Águila era la única que tenía una aguja en la aldea, así que ella empezó a coser primero. Se hizo un par de alas muy lindas y voló mucho más alto que la Gallina. La Gallina se consiguió la aguja para empezar a coser sus alas, pero se cansó antes de terminarlas. Dejó la aguja encima del armario y se fue a preparar algo de comida para sus hijos.
 	</h3></div>
 
@@ -225,12 +221,12 @@ children.
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text06" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio05" onended="resetbutton('05')" src="https://globalstorybooks.net/media/audio/es/0158/mp3/05.mp3"></audio>
+		<audio id="audio05" src="https://globalstorybooks.net/media/audio/es/0158/mp3/05.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch between Spanish and English">en</button>
-		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch between Spanish and Spanish">es</button>
+		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch to English">en</button>
+		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch to Spanish">es</button>
 	</div>
 </div>
 
@@ -240,7 +236,6 @@ children.
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/06.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	Pero las otras aves habían visto al Águila irse volando lejos, así que le pidieron a la Gallina que les prestara la aguja para hacerse alas también. Y pronto, el cielo estaba cubierto de muchas aves volando.
 	</h3></div>
 
@@ -259,12 +254,12 @@ over the sky.
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text07" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio06" onended="resetbutton('06')" src="https://globalstorybooks.net/media/audio/es/0158/mp3/06.mp3"></audio>
+		<audio id="audio06" src="https://globalstorybooks.net/media/audio/es/0158/mp3/06.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch between Spanish and English">en</button>
-		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch between Spanish and Spanish">es</button>
+		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch to English">en</button>
+		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch to Spanish">es</button>
 	</div>
 </div>
 
@@ -274,7 +269,6 @@ over the sky.
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/07.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	Cuando la última ave fue a entregar la aguja prestada, la Gallina no estaba en casa. Así que los hijos de la Gallina tomaron la aguja para jugar con ella. Cuando se cansaron de jugar, dejaron la aguja en la tierra.
 	</h3></div>
 
@@ -295,12 +289,12 @@ the sand.
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text08" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio07" onended="resetbutton('07')" src="https://globalstorybooks.net/media/audio/es/0158/mp3/07.mp3"></audio>
+		<audio id="audio07" src="https://globalstorybooks.net/media/audio/es/0158/mp3/07.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch between Spanish and English">en</button>
-		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch between Spanish and Spanish">es</button>
+		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch to English">en</button>
+		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch to Spanish">es</button>
 	</div>
 </div>
 
@@ -310,7 +304,6 @@ the sand.
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/08.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	Más tarde, el Águila volvió. Pidió la aguja para coser algunas plumas que se le habían caído durante su viaje. La Gallina fue a buscarla en el armario y no estaba. Buscó en la cocina y en el patio, pero la aguja no aparecía. No estaba en ningún lugar.
 	</h3></div>
 
@@ -332,12 +325,12 @@ found.
 	<div class="btn-group switcher-group">
 		<a href="#text07" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text09" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio08" onended="resetbutton('08')" src="https://globalstorybooks.net/media/audio/es/0158/mp3/08.mp3"></audio>
+		<audio id="audio08" src="https://globalstorybooks.net/media/audio/es/0158/mp3/08.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch between Spanish and English">en</button>
-		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch between Spanish and Spanish">es</button>
+		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch to English">en</button>
+		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch to Spanish">es</button>
 	</div>
 </div>
 
@@ -347,7 +340,6 @@ found.
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/09.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	“Sólo dame un día para encontrar la aguja,” la Gallina le rogó al Águila. “Para que puedas arreglar tus alas y volar en búsqueda de comida.” “Un solo día,” dijo el Águila. “Si no encuentras la aguja en un día, tendrás que regalarme uno de tus pollitos como pago.”
 	</h3></div>
 
@@ -368,12 +360,12 @@ your chicks as payment.”
 	<div class="btn-group switcher-group">
 		<a href="#text08" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text10" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio09" onended="resetbutton('09')" src="https://globalstorybooks.net/media/audio/es/0158/mp3/09.mp3"></audio>
+		<audio id="audio09" src="https://globalstorybooks.net/media/audio/es/0158/mp3/09.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch between Spanish and English">en</button>
-		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch between Spanish and Spanish">es</button>
+		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch to English">en</button>
+		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch to Spanish">es</button>
 	</div>
 </div>
 
@@ -383,7 +375,6 @@ your chicks as payment.”
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/10.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	Cuando el Águila regresó al día siguiente, vio que la Gallina estaba arañando la tierra, pero la aguja no estaba. Así que el Águila voló muy rápido hacia dónde estaban los pollitos, agarró a uno de ellos y se lo llevó lejos. Después de eso, el Águila siempre encontraba a la Gallina arañando la tierra con sus patas para encontrar la aguja.
 	</h3></div>
 
@@ -406,12 +397,12 @@ needle.
 	<div class="btn-group switcher-group">
 		<a href="#text09" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text11" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio10" onended="resetbutton('10')" src="https://globalstorybooks.net/media/audio/es/0158/mp3/10.mp3"></audio>
+		<audio id="audio10" src="https://globalstorybooks.net/media/audio/es/0158/mp3/10.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch between Spanish and English">en</button>
-		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch between Spanish and Spanish">es</button>
+		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch to English">en</button>
+		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch to Spanish">es</button>
 	</div>
 </div>
 
@@ -421,7 +412,6 @@ needle.
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/11.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	Y cuando aparece la sombra de las alas del Águila en la tierra, la Gallina les ordena a sus pollitos: “Aléjense del suelo seco y descubierto.” Y ellos le contestan: “No somos tontos, saldremos corriendo.”
 	</h3></div>
 
@@ -440,27 +430,28 @@ And they respond:
 	<div class="btn-group switcher-group">
 		<a href="#text10" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#colophon" class="btn btn-lg" title="Story credits"><i class="icon-arrow-down"></i></a>
-		<audio id="audio11" onended="resetbutton('11')" src="https://globalstorybooks.net/media/audio/es/0158/mp3/11.mp3"></audio>
+		<audio id="audio11" src="https://globalstorybooks.net/media/audio/es/0158/mp3/11.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch between Spanish and English">en</button>
-		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch between Spanish and Spanish">es</button>
+		<button onclick="switchlang('es,en','en,es,es')" class="btn btn-lg lang-primary" title="Switch to English">en</button>
+		<button onclick="switchlang('es,es','en,es,es')" class="btn btn-lg lang-secondary" title="Switch to Spanish">es</button>
 	</div>
 </div>
 
 </div>
 <hr>
 
-<div id="colophon" class="columns">
+
+        <div id="colophon" class="columns">
 	<div class="column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h5>Written by: Ann Nduku</h5>
-		<h5>Illustrated by: Wiehan de Jager</h5>
-		<h5>Translated by: Karina Vásquez</h5>
-		<h5>Read by: Áurea Vericat</h5>
-		<h5>Language: <a href="/storybooks-minnesota/stories/es">Spanish</a></h5>
-		<h5><a href="/storybooks-minnesota/stories/es/level3">Level 3</a></h5>
-		<h5>Source: <a href="https://africanstorybook.org/reader.php?id=2084" target="_blank">Hen and Eagle</a> from <a href="https://africanstorybook.org/">African Storybook</a></h5>
+		<h5><span class="colophon-heading">Written by:</span> Ann Nduku</h5>
+		<h5><span class="colophon-heading">Illustrated by:</span> Wiehan de Jager</h5>
+		<h5><span class="colophon-heading">Translated by:</span> Karina Vásquez</h5>
+		<h5><span class="colophon-heading">Read by:</span> Áurea Vericat</h5>
+		<h5><span class="colophon-heading">Language:</span> <a href="/storybooks-minnesota/stories/es">Spanish</a></h5>
+		<h5><span class="colophon-heading">Level:</span> <a href="/storybooks-minnesota/stories/es/level3">Level 3</a></h5>
+		<h5><span class="colophon-heading">Source:</span> <a href="https://africanstorybook.org/reader.php?id=2084" target="_blank">Hen and Eagle</a> from <a href="https://africanstorybook.org/">African Storybook</a></h5>
 
 		<div><a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 International License</a>.</div>
 
@@ -478,10 +469,9 @@ And they respond:
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/storybooks-minnesota/stories/es" class="button">Back to stories list</a> <a class="btn btn-lg disabled" target="_blank" href="">Download PDF</a>
+	<a class="btn btn-lg" href="/storybooks-minnesota/stories/es" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
 <br><br>
 </div>
-
 
 
     </div>

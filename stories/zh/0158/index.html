@@ -10,7 +10,7 @@
 	<link rel="manifest" href="/storybooks-minnesota/site.webmanifest?v=4">
 	<link rel="mask-icon" href="/storybooks-minnesota/safari-pinned-tab.svg?v=4" color="#5bbad5">
 	<link rel="shortcut icon" href="/storybooks-minnesota/favicon.ico?v=4">
-	<meta name="msapplication-TileColor" content="#ffc40d">
+	<meta name="msapplication-TileColor" content="#00aba9">
 	<meta name="theme-color" content="#ffffff">
 	<title>母鸡和老鹰 - Storybooks Minnesota</title>
 	<meta name="description" content="Storybooks Minnesota is designed specifically for teachers, parents, and community members. It makes 40 stories from the African Storybook available in English as well as the major heritage, immigrant and refugee languages of Minnesota, with stories and audio in English, Amharic, Arabic, French, German, Mandarin, Norwegian, Oromo, Russian, Somali, Spanish, Swedish, and Vietnamese, among others.
@@ -20,12 +20,10 @@
 	<link rel="stylesheet" href="/storybooks-minnesota/css/fontello.min.css">
 	<link rel="canonical" href="https://global-asp.github.io//storybooks-minnesota/stories/zh/0158/">
 	<link rel="alternate" type="application/rss+xml" title="Storybooks Minnesota" href="/storybooks-minnesota">
-	<script src="/storybooks-minnesota/js/sbc.js"></script>
+	<script src="/storybooks-minnesota/js/sbc.min.js"></script>
 </head>
 
-
   <body>
-
 
     <div class="container">
 
@@ -49,12 +47,13 @@
 	</section>
 </header>
 
-        <div class="float-right"><a class="btn btn-lg disabled" target="_blank" href="">Download PDF</a></div> 
+        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Change language</option>
 		<option value="/storybooks-minnesota/stories/en/0158">English</option>
+		<option value="/storybooks-minnesota/stories/es/0158">Spanish</option>
 		<option value="/storybooks-minnesota/stories/am/0158">Amharic</option>
 		<option value="/storybooks-minnesota/stories/ar/0158">Arabic</option>
 		<option value="/storybooks-minnesota/stories/fr/0158">French</option>
@@ -63,7 +62,6 @@
 		<option value="/storybooks-minnesota/stories/nb/0158">Norwegian</option>
 		<option value="/storybooks-minnesota/stories/om/0158">Oromo</option>
 		<option value="/storybooks-minnesota/stories/so/0158">Somali</option>
-		<option value="/storybooks-minnesota/stories/es/0158">Spanish</option>
 	</select>
 </div>
 
@@ -90,15 +88,16 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon cover-icon-text" src="/storybooks-minnesota/css/language.svg" alt="Language"></span> <a href="/storybooks-minnesota/stories/zh">Chinese (Mandarin)</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon cover-icon-text" src="/storybooks-minnesota/css/level.svg" alt="Level"></span> <a href="/storybooks-minnesota/stories/zh/level3">Level 3</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-audio" src="/storybooks-minnesota/css/speaker.svg" alt="Narrate full story"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/zh/0158/zh-0158_hen.mp3" type="audio/mpeg"></audio></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Reading speed"><img class="cover-icon cover-icon-text" src="/storybooks-minnesota/css/speedometer.svg" alt="Reading speed" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="Reading speed: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/storybooks-minnesota/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
+
 <hr>
 
-<div id="text02" class="columns">
+        <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/02.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	很久很久以前，母鸡和老鹰是好朋友。他们和其他的鸟儿住在一起，相安无事，但是他们都不会飞。
 	</h3></div>
 
@@ -115,7 +114,7 @@ None of them could fly.
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text03" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio02" onended="resetbutton('02')" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/02.mp3"></audio>
+		<audio id="audio02" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/02.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
@@ -130,7 +129,6 @@ None of them could fly.
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/03.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	有一天，他们住的地方发生了饥荒。老鹰要走很远很远的路才能找到食物。她回来的时候看起来非常疲倦。老鹰说：“这样走太累了！肯定有一种更省力的方法。”
 	</h3></div>
 
@@ -149,7 +147,7 @@ to travel!” said Eagle.
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text04" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio03" onended="resetbutton('03')" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/03.mp3"></audio>
+		<audio id="audio03" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/03.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
@@ -164,7 +162,6 @@ to travel!” said Eagle.
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	母鸡饱饱地睡了一觉，想到了一个好主意。她开始搜集其他鸟儿掉下来的羽毛，说：“让我们把这些羽毛都缝在我们身上吧，也许这样我们走路就不吃力了。”
 	</h3></div>
 
@@ -185,7 +182,7 @@ to travel.”
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text05" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio04" onended="resetbutton('04')" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/04.mp3"></audio>
+		<audio id="audio04" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/04.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
@@ -200,7 +197,6 @@ to travel.”
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/05.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	老鹰是村庄里唯一一个有银针的，所以她第一个开始缝羽毛。她给自己做了一双非常漂亮的翅膀，做完之后，在母鸡头上飞来飞去。母鸡问老鹰借了针，但她很快就厌烦了缝纫。她把银针留在柜子上，跑到厨房里，给她的孩子做饭。
 	</h3></div>
 
@@ -225,7 +221,7 @@ children.
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text06" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio05" onended="resetbutton('05')" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/05.mp3"></audio>
+		<audio id="audio05" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/05.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
@@ -240,7 +236,6 @@ children.
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/06.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	其他的鸟儿看到老鹰飞得又高又远，非常羡慕。他们问母鸡借了银针，这样他们也可以给自己做翅膀了。过了不久，其他的鸟儿也都能上天飞翔了。
 	</h3></div>
 
@@ -259,7 +254,7 @@ over the sky.
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text07" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio06" onended="resetbutton('06')" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/06.mp3"></audio>
+		<audio id="audio06" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/06.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
@@ -274,7 +269,6 @@ over the sky.
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/07.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	当最后一只鸟儿归还银针的时候，母鸡不在家。她的孩子拿走了银针，玩来玩去。他们玩厌的时候，就把银针落在了沙地里。
 	</h3></div>
 
@@ -295,7 +289,7 @@ the sand.
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text08" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio07" onended="resetbutton('07')" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/07.mp3"></audio>
+		<audio id="audio07" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/07.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
@@ -310,7 +304,6 @@ the sand.
 <div id="text08" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/08.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	那天下午，老鹰回来了，她问母鸡要回自己的银针，因为她要修补一些松散的羽毛。母鸡找遍了柜子、厨房和后院，都找不到银针。
 	</h3></div>
 
@@ -332,7 +325,7 @@ found.
 	<div class="btn-group switcher-group">
 		<a href="#text07" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text09" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio08" onended="resetbutton('08')" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/08.mp3"></audio>
+		<audio id="audio08" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/08.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
@@ -347,7 +340,6 @@ found.
 <div id="text09" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/09.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	母鸡求老鹰：“再给我一天吧！明天你就能修补翅膀，飞着去找食物了。”老鹰说：“好，就一天。如果你找不到银针的话，你就要把一个孩子给我作为补偿。”
 	</h3></div>
 
@@ -368,7 +360,7 @@ your chicks as payment.”
 	<div class="btn-group switcher-group">
 		<a href="#text08" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text10" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio09" onended="resetbutton('09')" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/09.mp3"></audio>
+		<audio id="audio09" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/09.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
@@ -383,7 +375,6 @@ your chicks as payment.”
 <div id="text10" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/10.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	第二天，老鹰来了，她看到母鸡正在沙地里翻来翻去，但是银针还是没有找到。老鹰从天上俯冲下来，抓了一只小鸡就飞走了。从那以后，无论老鹰什么时候出现，她都看到母鸡在沙地里找银针。
 	</h3></div>
 
@@ -406,7 +397,7 @@ needle.
 	<div class="btn-group switcher-group">
 		<a href="#text09" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text11" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<audio id="audio10" onended="resetbutton('10')" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/10.mp3"></audio>
+		<audio id="audio10" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/10.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
@@ -421,7 +412,6 @@ needle.
 <div id="text11" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0158/11.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt def"><h3>
-
 	当母鸡在地上看到老鹰的影子时，她就警告自己的孩子：“快躲起来！别呆在这空旷干燥的地上。”孩子们回答她说：“我们不是傻瓜，我们会跑的。”
 	</h3></div>
 
@@ -440,7 +430,7 @@ And they respond:
 	<div class="btn-group switcher-group">
 		<a href="#text10" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#colophon" class="btn btn-lg" title="Story credits"><i class="icon-arrow-down"></i></a>
-		<audio id="audio11" onended="resetbutton('11')" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/11.mp3"></audio>
+		<audio id="audio11" src="https://globalstorybooks.net/media/audio/zh/0158/mp3/11.mp3"></audio>
 		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
@@ -452,15 +442,16 @@ And they respond:
 </div>
 <hr>
 
-<div id="colophon" class="columns">
+
+        <div id="colophon" class="columns">
 	<div class="column col-7 col-lg-12 col-md-12 col-sm-12">
-		<h5>Written by: Ann Nduku</h5>
-		<h5>Illustrated by: Wiehan de Jager</h5>
-		<h5>Translated by: Vicky Liu</h5>
-		<h5>Read by: Zhuo Sun</h5>
-		<h5>Language: <a href="/storybooks-minnesota/stories/zh">Chinese (Mandarin)</a></h5>
-		<h5><a href="/storybooks-minnesota/stories/zh/level3">Level 3</a></h5>
-		<h5>Source: <a href="https://africanstorybook.org/reader.php?id=2084" target="_blank">Hen and Eagle</a> from <a href="https://africanstorybook.org/">African Storybook</a></h5>
+		<h5><span class="colophon-heading">Written by:</span> Ann Nduku</h5>
+		<h5><span class="colophon-heading">Illustrated by:</span> Wiehan de Jager</h5>
+		<h5><span class="colophon-heading">Translated by:</span> Vicky Liu</h5>
+		<h5><span class="colophon-heading">Read by:</span> Zhuo Sun</h5>
+		<h5><span class="colophon-heading">Language:</span> <a href="/storybooks-minnesota/stories/zh">Chinese (Mandarin)</a></h5>
+		<h5><span class="colophon-heading">Level:</span> <a href="/storybooks-minnesota/stories/zh/level3">Level 3</a></h5>
+		<h5><span class="colophon-heading">Source:</span> <a href="https://africanstorybook.org/reader.php?id=2084" target="_blank">Hen and Eagle</a> from <a href="https://africanstorybook.org/">African Storybook</a></h5>
 
 		<div><a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 International License</a>.</div>
 
@@ -478,10 +469,9 @@ And they respond:
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/storybooks-minnesota/stories/zh" class="button">Back to stories list</a> <a class="btn btn-lg disabled" target="_blank" href="">Download PDF</a>
+	<a class="btn btn-lg" href="/storybooks-minnesota/stories/zh" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
 <br><br>
 </div>
-
 
 
     </div>
