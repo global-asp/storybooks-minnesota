@@ -47,13 +47,12 @@
 	</section>
 </header>
 
-        <div class="float-right"><span class="tooltip tooltip-left" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span></div>
+        <div class="float-right"><button class="btn btn-lg" onclick="pdfdl()">Download Options</button></div>
 
 <div class="float-right">
 	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
 		<option selected="" disabled="">Change language</option>
 		<option value="/storybooks-minnesota/stories/en/0006">English</option>
-		<option value="/storybooks-minnesota/stories/es/0006">Spanish</option>
 		<option value="/storybooks-minnesota/stories/am/0006">Amharic</option>
 		<option value="/storybooks-minnesota/stories/ar/0006">Arabic</option>
 		<option value="/storybooks-minnesota/stories/fr/0006">French</option>
@@ -62,6 +61,7 @@
 		<option value="/storybooks-minnesota/stories/nb/0006">Norwegian</option>
 		<option value="/storybooks-minnesota/stories/om/0006">Oromo</option>
 		<option value="/storybooks-minnesota/stories/so/0006">Somali</option>
+		<option value="/storybooks-minnesota/stories/es/0006">Spanish</option>
 		<option value="/storybooks-minnesota/about/languages/">More languages...</option>
 	</select>
 </div>
@@ -73,14 +73,12 @@
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h1 dir="rtl"><span class="def">أنانسي و الحكمة</span>
 			<span dir="ltr" class="l1">Anansi and Wisdom</span>
-			<span dir="ltr" class="l2">Anansi y la sabiduría</span>
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
 			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
 			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/ar/0006/mp3/01.mp3"></audio>
-			<button onclick="switchlang('ar,en','en,es,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
-			<button onclick="switchlang('ar,es','en,es,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Spanish">es</button>
+			<button onclick="switchlang('ar,en','en,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon cover-icon-text" src="/storybooks-minnesota/css/pencil.svg" alt="Written by"></span> Ghanaian folktale</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon cover-icon-text" src="/storybooks-minnesota/css/art.svg" alt="Illustrated by"></span> Wiehan de Jager</h3>
@@ -92,6 +90,44 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Reading speed"><img class="cover-icon cover-icon-text" src="/storybooks-minnesota/css/speedometer.svg" alt="Reading speed" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="Reading speed: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/storybooks-minnesota/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
+</div>
+<div class="modal" id="modal-pdf">
+  <a href="#close" class="modal-overlay" aria-label="Close" onclick="pdfdl()"></a>
+  <div class="modal-container">
+    <div class="modal-header">
+      <a href="#close" class="btn btn-clear float-right" aria-label="Close" onclick="pdfdl()"></a>
+      <div class="modal-title h5">Download Options</div>
+    </div>
+    <div class="modal-body">
+      <div class="content">
+        <h4>Regular PDFs (full-page)</h4>
+        <ul>
+          <li><strong><a href="https://globalstorybooks.net/media/ue/pdf/ar/ar-0006_anansi.pdf" target="_blank">Regular PDF (monolingual)<br><center><img src="/storybooks-minnesota/css/editions/landscape-mono.svg" width="100"></center></a></strong></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless/0006_anansi-wordless.pdf" target="_blank">Wordless PDF (landscape)<br><center><img src="/storybooks-minnesota/css/editions/landscape-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless/ar/ar-0006_anansi-imageless.pdf" target="_blank">Imageless PDF (monolingual)<br><center><img src="/storybooks-minnesota/css/editions/landscape-imageless.svg" width="100"></center></a></li>
+        </ul>
+
+        <h4>Bilingual PDFs</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual/ar-en/0006_anansi-bilingual_ar-en.pdf" target="_blank">Bilingual PDF (Arabic-English, landscape)<br><center><img src="/storybooks-minnesota/css/editions/landscape-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual/ar-en/0006_anansi-imageless-bilingual_ar-en.pdf" target="_blank">Bilingual imageless PDF (Arabic-English, landscape)<br><center><img src="/storybooks-minnesota/css/editions/landscape-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+
+
+        <h4>Booklet PDFs (for printing)</h4>
+        <ul>
+          <li><a href="https://globalstorybooks.net/media/ue/booklet/ar/ar-0006_anansi-booklet.pdf" target="_blank">Booklet PDF (monolingual)<br><center><img src="/storybooks-minnesota/css/editions/booklet-mono.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/bilingual-booklet/ar-en/0006_anansi-bilingual_ar-en-booklet.pdf" target="_blank">Bilingual booklet PDF (Arabic-English)<br><center><img src="/storybooks-minnesota/css/editions/booklet-bil1.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/wordless-booklet/0006_anansi-wordless-booklet.pdf" target="_blank">Wordless booklet<br><center><img src="/storybooks-minnesota/css/editions/booklet-wordless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-booklet/ar/ar-0006_anansi-imageless-booklet.pdf" target="_blank">Imageless booklet (monolingual)<br><center><img src="/storybooks-minnesota/css/editions/booklet-imageless.svg" width="100"></center></a></li>
+          <li><a href="https://globalstorybooks.net/media/ue/imageless-bilingual-booklet/ar-en/0006_anansi-imageless-bilingual_ar-en-booklet.pdf" target="_blank">Bilingual imageless booklet (Arabic-English)<br><center><img src="/storybooks-minnesota/css/editions/booklet-imageless-bil1.svg" width="100"></center></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a class="btn btn-primary" onclick="pdfdl()">Close</a>
+    </div>
+  </div>
 </div>
 
 <hr>
@@ -112,9 +148,7 @@ The god Nyame up in the sky
 had all the wisdom of the world.
 He kept it safe in a clay pot.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	Hace mucho, mucho tiempo la gente no sabía nada. No sabían cómo cultivar, o cómo tejer tela, o cómo hacer herramientas de hierro. El dios Nyame arriba en el cielo tenía toda la sabiduría del mundo. La mantenía guardada en una vasija de barro.
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -123,8 +157,7 @@ He kept it safe in a clay pot.
 		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar,en','en,es,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar,es','en,es,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Spanish">es</button>
+		<button onclick="switchlang('ar,en','en,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 	</div>
 </div>
 
@@ -145,9 +178,7 @@ Every time Anansi looked in the
 clay pot, he learned something
 new. It was so exciting!
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	Un día, Nyame decidió darle la vasija de sabiduría a Anansi. Cada vez que Anansi se asomaba y miraba dentro de la vasija de barro, aprendía algo nuevo. ¡Qué impresionante!
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -156,8 +187,7 @@ new. It was so exciting!
 		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar,en','en,es,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar,es','en,es,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Spanish">es</button>
+		<button onclick="switchlang('ar,en','en,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 	</div>
 </div>
 
@@ -183,9 +213,7 @@ it was hard climbing the tree
 with the pot bumping him in the
 knees all the time.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	El codicioso Anansi pensó, “voy a guardar la vasija en la copa de un árbol muy alto. ¡Y será sólo mía!” Hiló un hilo largo, envolvió con él la vasija de barro, y lo ató a su cintura. Empezó a trepar el árbol. Pero se le hacía muy difícil trepar el árbol con la vasija constantemente pegándole en las rodillas.
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -194,8 +222,7 @@ knees all the time.
 		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar,en','en,es,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar,es','en,es,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Spanish">es</button>
+		<button onclick="switchlang('ar,en','en,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 	</div>
 </div>
 
@@ -219,9 +246,7 @@ Anansi tried tying the clay pot
 full of wisdom to his back, and it
 really was a lot easier.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	Mientras tanto, el hijo pequeño de Anansi lo miraba desde abajo y le dijo, “¿No sería más fácil trepar si te ataras la vasija a tu espalda?” Anansi ató la vasija llena de sabiduría a su espalda y, efectivamente, fue mucho más fácil.
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -230,8 +255,7 @@ really was a lot easier.
 		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar,en','en,es,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar,es','en,es,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Spanish">es</button>
+		<button onclick="switchlang('ar,en','en,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 	</div>
 </div>
 
@@ -256,9 +280,7 @@ Anansi was so angry about this
 that he threw the clay pot down
 out of the tree.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	En un instante logró llegar a la copa del árbol. Pero entonces se detuvo a pensar: “Se supone que yo soy quien tiene toda la sabiduría, ¡pero mi hijo fue más listo que yo!” Anansi se enojó tanto que lanzó la vasija desde lo alto del árbol.
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -267,8 +289,7 @@ out of the tree.
 		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar,en','en,es,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar,es','en,es,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Spanish">es</button>
+		<button onclick="switchlang('ar,en','en,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 	</div>
 </div>
 
@@ -292,9 +313,7 @@ make iron tools, and all the
 other things that people know
 how to do.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 level3-txt l2"><h3>
-	Quedó hecha pedazos en el suelo. La sabiduría quedó libre y disponible para todos. Y así fue cómo la gente supo cultivar, tejer, hacer herramientas de hierro, y muchas otras cosas más.
-	</h3></div>
+
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
@@ -303,8 +322,7 @@ how to do.
 		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar,en','en,es,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar,es','en,es,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Spanish">es</button>
+		<button onclick="switchlang('ar,en','en,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
 	</div>
 </div>
 
@@ -338,7 +356,7 @@ how to do.
 </div>
 <div>
 <h5>Options</h5>
-	<a class="btn btn-lg" href="/storybooks-minnesota/stories/ar" class="button">Back to stories list</a> <span class="tooltip tooltip-top" data-tooltip="PDF download for this story is currently not available."><a class="btn btn-lg disabled">Download PDF</a></span>
+	<a class="btn btn-lg" href="/storybooks-minnesota/stories/ar" class="button">Back to stories list</a> <a class="btn btn-lg" href="https://globalstorybooks.net/media/ue/pdf/ar/ar-0006_anansi.pdf" target="_blank">Download PDF</a>
 <br><br>
 </div>
 
